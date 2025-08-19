@@ -1,0 +1,85 @@
+PHP Praktika Sualları
+1. Hello World
+
+PHP-də ekrana Salam Dünya! çap edən proqram yazın.
+
+2. Dəyişənlər
+
+İki dəyişən yaradın: $a = 10, $b = 5. Onların cəmini, fərqini, hasilini və bölməsini ekrana çap edin.
+
+3. Şərt əməliyyatı (if-else)
+
+İstifadəçidən bir ədəd alın. Əgər ədəd müsbətdirsə "Müsbət", mənfidirsə "Mənfi", sıfırdırsa "Sıfır" yazdırın.
+
+4. Switch-case
+
+İstifadəçidən həftənin gün nömrəsini alın (1-7). Hər günə uyğun adını ekrana çap edin.
+
+5. Döngülər
+
+for döngüsü ilə 1-dən 10-a qədər ədədləri və onların kvadratlarını çap edin.
+
+6. While döngüsü
+
+while ilə 10-dan 1-ə qədər ədədləri tərs sırada çap edin.
+
+7. Array
+
+Bir array yaradın: ["alma", "armud", "banan"]. foreach ilə hər meyvəni ekrana çap edin.
+
+8. Array funksiyaları
+
+Array-ə yeni element əlavə edin, sonra elementləri azalan sırada sort edin və ekrana çap edin.
+
+9. Assosiativ array
+
+Aşağıdakı assosiativ array-in bütün açar və dəyərlərini foreach ilə çap edin:
+
+$student = ["ad" => "Elvin", "yas" => 20, "fenn" => "Riyaziyyat"];
+
+10. Function
+
+Funksiya yazın: function topla($a, $b) iki ədədi cəmləsin və nəticəni qaytarsın.
+
+11. String funksiyaları
+
+İstifadəçidən bir string alın və onu kiçik hərflərə çevirin, uzunluğunu çap edin, 3-cü simvolunu çıxarın.
+
+12. Form ilə GET
+
+HTML form yaradın. İstifadəçi adını daxil etsin və PHP ilə $_GET vasitəsilə ekrana çap edin.
+
+13. Form ilə POST
+
+İstifadəçi e-mail və şifrə daxil etsin. PHP-də $_POST istifadə edərək onları yoxlayın və ekrana "Düzgün" və ya "Yanlış" yazdırın.
+
+14. Include və Require
+
+Bir faylda greetings.php yaratın və orada bir funksiya yazın: function salam() { echo "Salam!"; }
+Sonra index.php-də onu include edin və funksiyanı çağırın.
+
+15. Date funksiyaları
+
+Bugünkü tarixi Y-m-d formatında və saatı H:i:s formatında ekrana çap edin.
+
+16. Random ədəd
+
+1-dən 100-ə qədər təsadüfi ədəd yaradın və istifadəçiyə "Böyük", "Kiçik" və ya "Bərabər 50" yazdırın.
+
+17. File funksiyaları
+
+data.txt faylı yaradın, içinə PHP öyrənirəm yazın, sonra oxuyun və ekrana çap edin.
+
+18. Cookie
+
+İstifadəçinin adını cookie-də saxlayın və bir səhifəyə daxil olanda ekrana "Salam, [ad]" yazdırın.
+
+19. Session
+
+Session istifadə edərək istifadəçi daxil olub olmadığını yoxlayın. Daxil olubsa "Xoş gəlmisiniz!", yoxsa "Zəhmət olmasa daxil olun" mesajını verin.
+
+20. Factorial hesablama
+
+21. Array Filter
+
+Bir array yaradın [2, 5, 8, 11, 14] və yalnız cüt ədədləri seçən funksiya yazın.
