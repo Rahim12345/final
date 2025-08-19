@@ -4,5 +4,5 @@ function balaHerfler($metn) {
 }
 
 // İstifadə nümunəsi
-echo balaHerfler("SALAM DÜNYA"); /
+echo balaHerfler("SALAM DÜNYA"); 
 ?>
