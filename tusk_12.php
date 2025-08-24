@@ -2,36 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>example_12</title>
+    <title>tusk_12</title>
 </head>
 <body>
-<center><h1><pre>URL-də göndərilən $_GET parametri ilə salam mesajı</pre></h1></center>
-<center style="margin: 10%">
-    <div class="container">
-        <form action="" method="GET">
-            <label for="">Adınızı daxil edin :
-                <input type="text" name="ad">
-            </label>
-            <input style="width: 125px" type="submit" value="adını ekrana çıxart">
-        </form>
-    </div>
-    <h1>
-         <pre>
+<center><h3><i>HTML form yaradın. İstifadəçi adını daxil etsin və PHP ilə $_GET vasitəsilə ekrana çap edin!</i></h3></center>
+
+<div align="center" class="form">
+    <form action="" method="GET">
+        <label>Adınızı qeyd edin :
+            <input type="text" name="word">
+        </label>
+        <input type="submit" value="göstər">
+    </form>
+</div>
+<hr>
+<br>
 <?php
+echo '<center>';
+if (isset($_GET['word'])){
+    $word = (String)$_GET['word'];
 
-if (isset($_GET['ad'])) {
-    $ad = htmlspecialchars($_GET['ad']);
 
-    echo '<hr><br>';
-    echo "Salam, " . $ad . "!";
+    echo '<pre><h2>' .'Adının çapı :  ' . $word. '</h2></pre>';
+
 }
+echo '</center>';
 ?>
-        </pre>
-    </h1>
-</center>
+
 </body>
 </html>
-

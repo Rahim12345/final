@@ -5,26 +5,37 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>example_7</title>
+    <title>tusk_7</title>
 </head>
 <body>
-<center><h1><pre>1 - dən yazdığınız rəqəmə qədər ardıcıl çap edilməsi</pre></h1></center>
+<center><h3><i>Bir array yaradın: ["alma", "armud", "banan"]. foreach ilə hər meyvəni ekrana çap edin</i></h3></center>
 <center style="margin: 10%">
-    <div class="container">
-        <form method="GET">
-            <label for="number">Seçdiyiniz rəqəmə qədər çap edin :
-                <input type="number" name="number">
-                <input type="submit">
-            </label>
-        </form>
-    </div>
-    <hr><br>
+    <form action="" method="POST">
+        <label for="el_1">element_1 :
+            <input type="text" name="el1">
+        </label>
+        <label for="el_2">element_2 :
+            <input type="text" name="el2">
+        </label>
+        <label for="el_3">element_3 :
+            <input type="text" name="el3">
+        </label>
+        <input type="submit" value="[ massivə yığ ]">
+    </form>
+    <hr>
+    <br>
     <?php
-    if (isset($_GET['number'])){
-        $number = $_GET['number'];
-        for ($i=1;$i<=$number;$i++){
-            echo "element : $i" . '<br>';
+    if (isset($_POST['el1'],$_POST['el2'],$_POST['el3'])){
+        $el_1 = $_POST['el1'];
+        $el_2 = $_POST['el2'];
+        $el_3 = $_POST['el3'];
+
+        $arr = [$el_1,$el_2,$el_3];
+        echo 'Arrays [ ';
+        foreach ($arr as $element){
+            echo $element . ', ';
         }
+        echo ' ]';
     }
     ?>
 </center>

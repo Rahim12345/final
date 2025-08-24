@@ -5,31 +5,31 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>example_5</title>
+    <title>tusk_5</title>
 </head>
 <body>
-<center><h1><pre>Yaş həddinin yoxlanması</pre></h1></center>
+<center><h3><i>for döngüsü ilə 1-dən 10-a qədər ədədləri və onların kvadratlarını çap edin</i></h3></center>
 <center style="margin: 10%">
     <div class="container">
-        <form action="" method="GET">
-            <label for="age">enter age
-                <input type="number" name="age" placeholder="enter age">
-                <input style="text-align: right" type="submit">
+        <form action="" method="POST">
+            <label for="num">enter age
+                <input type="number" name="num" placeholder="enter number">
+                <input style="text-align: right" type="submit" value="çap et">
             </label></form>
     </div>
     <hr>
     <br>
     <?php
-    if ($_SERVER["REQUEST_METHOD"] === "GET"){
-        $age = isset($_GET['age']) ? $_GET['age'] : '';
+    if (isset($_POST['num'])){
+        $num = $_POST['num'];
 
-        if ($age<18){
-            echo '<center><pre><h1>' . "sizin yaşınız uyğun deyil! ____ " . " " . "age : $age" . '</h1></pre></center>';
-        }else{
-            echo '<center><pre><h1>' . "sistemə giriş uğurlu! ____ " . " " . "age : $age" . '</h1></pre></center>';
+        for ($i = 1; $i <= $num; $i++) {
+            echo '<pre>' . $i . " ^ 2 = " . ($i * $i) . "<br><br>" . '</pre>';
         }
     }
+
     ?>
+
 </center>
 </body>
 </html>

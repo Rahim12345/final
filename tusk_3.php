@@ -5,35 +5,35 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>example_3/calculate</title>
+    <title>tusk_3</title>
 </head>
 <body>
-<center><h1><pre>İki ədədin toplanması</pre></h1></center>
+<center><h3><i>Şərt əməliyyatı (if-else)</i></h3></center>
 <center style="margin: 10%">
-    <div class="container">
-        <form method="GET">
-            <label for="number_1">number_1 :
-                <input type="number" name="number_1">
+    <div>
+        <form action="" method="POST">
+            <label for="number">Ədədi daxil edin :
+                <input type="number" name="number">
             </label>
-            <label for="number_2">number_2 :
-                <input type="number" name="number_2">
-            </label>
-            <input type="submit" value="result">
         </form>
     </div>
-    <hr>
-    <br>
+    <hr><br>
     <?php
-    if (isset($_GET['number_1'],$_GET['number_2'])){
-        $number_1 = $_GET['number_1'];
-        $number_2 = $_GET['number_2'];
+    if (isset($_POST['number'])){
+        $number = $_POST['number'];
 
-        echo '<pre><h1>' . 'Result : ' . ($number_1 + $number_2) . '</h1></pre>';
+        if ($number>0)
+            echo $number . '->  müsbət' . '<br><br>';
+        elseif ($number==0)
+            echo $number . '->  sıfır' . '<br><br>';
+        elseif($number<0)
+            echo $number . '->  mənfi' . '<br><br>';
+        else
+            echo 'düzgün ədəd daxil edin';
     }
+
     ?>
 </center>
-
-
 </body>
 </html>
 

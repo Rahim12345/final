@@ -2,32 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>example_11</title>
+    <title>tusk_11</title>
 </head>
 <body>
-<center><h1><pre>Adını daxil et və $_POST ilə ekrana çıxar</pre></h1></center>
-<center style="margin: 10%">
+<center><h3><i>İstifadəçidən bir string alın və onu kiçik hərflərə çevirin, uzunluğunu çap edin, 3-cü simvolunu çıxarın!</i></h3></center>
 
-    <div class="container">
-        <form action="" method="POST">
-            <label for="">Adınızı daxil edin :
-                <input type="text" name="name">
-            </label>
-            <input style="width: 125px" type="submit" value="adını ekrana çıxart">
-        </form>
-    </div>
-    <?php
-    if (isset($_POST['name'])){
-        $name = $_POST['name'];
-        echo '<hr><br>';
-        echo '<pre><h1>' . "Salam $name xoş gəlmisən!" . '</h1></pre>';
+<div align="center" class="form">
+    <form action="" method="POST">
+        <label>Bir söz yazın :
+            <input type="text" name="word">
+        </label>
+        <input type="submit" value="göstər">
+    </form>
+</div>
+<hr>
+<br>
+<?php
+echo '<center>';
+if (isset($_POST['word'])){
+    $word = (String)$_POST['word'];
+
+    $lower = strtolower($word);
+
+    $length = strlen($word);
+
+    if ($length >= 3) {
+        $modified = substr_replace($word, '[]', 2, 1);
+    } else {
+        $modified = $word;
     }
-    ?>
+    echo '<pre>'.'Kiçik həriflərlə yazılışı   :  ' . $lower . '</pre>';
+    echo '<pre>'.'Sözün uzunluğu              :  ' . $length . '</pre>';
+    echo '<pre>'.'Seçdiyiniz simvol           :  ' . $modified . '</pre>';
 
-</center>
+}
+echo '</center>';
+?>
+
 </body>
 </html>
-
