@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1{
+    text-align: center;
+    margin: 50px 0;
+    padding-top: 20px;
+    text-transform: uppercase;
+    font-size: 60px;
+   
+}
+
+.container{
+    width: 100%;
+    max-width: 1400px;
+    margin:  0 auto;
+    min-height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+  
+ 
+}
+
+
+.box{
+    text-align: center;
+    flex-direction: column;
+    gap: 10px;
+    transition: all 0.5s linear;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+    height: 250px;
+    margin: 20px;
+    padding: 30px;
+     background: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.box a {
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+}
+
+
+h2{
+    text-transform: uppercase;
+    font-size: 25px;
+}
+
+.box:hover {
+    transform: translateY(-20px);
+    background: #cac7c7; /* box hover olunanda fon tünd olur */
+}
+
+.box:hover h2,
+.box:hover a {
+    color: #fff;
+}
+
+/* Amma box hover olunmuş vəziyyətdə linkin üstünə gələndə rəng dəyişir */
+.box:hover a:hover {
+    color: rgb(0, 0, 0); /* istədiyin rəng */
+}
+
